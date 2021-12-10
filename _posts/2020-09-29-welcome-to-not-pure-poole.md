@@ -1,26 +1,46 @@
 ---
 layout: post
-title: Welcome to Not Pure Poole
-date: 2020-09-29 23:18 +0800
-last_modified_at: 2020-10-01 01:08:25 +0800
-tags: [jekyll theme, jekyll, tutorial]
+title: jekyll
+date: 2021-12-10 22:36 +0800
+last_modified_at: 2021-12-11 01:59:11 +0800
+tags: [jekyll , what_is_jekyll?, github_page]
 toc:  true
 ---
-Welcome to **Not Pure Poole**! This is an example post to show the layout.
-{: .message }
+  
+## What is jekyll?
+  
+'jekyll'이란 github에서 개발한 또 다른 사이트 개발 툴로, 블로그 지향적인 정적 사이트 생성이 가능하다. 이에 핵심 구동 역할로서 꼽을 수 있는 것 중 하나가 텍스트 변환 엔진이라는 것인데 이는 간단히 말해 마크업 언어로 글을 작성하면 이를 미리 정의해 둔 규착에 따라 다양한 레이아웃으로 포장하여 정적 웹사이트로 만들어주는 기능을 수행한다.
+  
+_config.yml을 수정하면 사용자의 입맛에 맞게 블로그 기본 툴(이름, 소개, 사이트 연동 등 템플릿에 따라 그 구성이 다름)을 변경할 수 있고, _post 디렉토리에 파일을 추가하면 이를 통해 자신이 작성한 포스트를 블로그에 업로드 하여 볼 수 있다.  
+  
+  
 
-First, do you notice the TOC on the right side? Try to scroll down to read this post, you'll find that the TOC is always sticky in the viewport.
-
-Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
-
-Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-
-## Inline HTML elements
-
-HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
-
+## jekyll의 디렉토리 구조
+  
+1. _config.yml : 환경설정 정보 보관, 명령어 실행을 옵션으로 설정하지 않아도 _config.yml 파일에 정의해두면 편리하게 사용 가능
+  
+2. _drafts : 'draft'의 뜻은 아직 미완성 상태인 초안을 뜻 함. 파일명 형식에 날짜가 지정되지 않은 게시 전의 포스트를 보관
+  
+3. _includes : 재사용에 쓰이는 파일을 담는 디렉토리, 포스트 또는 레이아웃에 쉽게 코드 삽입 가능
+  
+4. _layouts : 포스트 사용에 쓰이는 템플릿을 담는 디렉토리, 'title'을 기준으로 각 포스트 별 레이아웃 선택이 가능
+  
+5. _posts : 사용자의 컨텐츠를 담는 디렉토리, 'YEAR-MONTH-DAY-TitleName.MARKUP'이라는 명명 규칙을 따라 파일을 저장해야 함
+  
+6. _data : 사이트에 사용할 데이터를 적절한 포맷으로 정리하여 보관하는 디렉토리
+  
+7. _sass : 사용자의 main.scss 에 임포트할 수 있는 Sass 조각들, 하나의 스타일시트 파일 main.css 로 가공되어 사용자의 사이트에서 사용하는 스타일들을 정의
+  
+8. _site : Jekyll 이 변환 작업을 마친 뒤 생성된 사이트가 저장되는 (디폴트) 경로
+  
+9. .jekyll-metadata : jekyll에서 해당 디렉토리를 참고하여 마지막으로 빌드된 후 한 번도 수정 과정을 거치지 않은 파일, 다음 빌드 때 어떤 파일을 생성해야 하는지 등을 판단
+  
+  
+  
+## 포스트 꾸미기 
+  
+포스트 글씨 설정
+   
 - **To bold text**, use `<strong>`.
 - *To italicize text*, use `<em>`.
 - <mark>To highlight</mark>, use `<mark>`.
@@ -28,142 +48,39 @@ HTML defines a long list of available inline tags, a complete list of which can 
 - Citations, like <cite>&mdash; Mark Otto</cite>, should use `<cite>`.
 - <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
 - Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
+  
 
-Most of these elements are styled by browsers with few modifications on our part.
 
-## Footnotes
+## 사진 넣기 
 
-Footnotes are supported as part of the Markdown syntax. Here's one in action. Clicking this number[^fn-sample_footnote] will lead you to a footnote. The syntax looks like:
+Step 1. assets 디렉토리에 사진 저장할 용도의 하위 디렉토리 생성하기
+  
+Step 2. 포스팅에 쓰일 사진들을 모두 /assets/fileName (여기서 필자는 img) 안에 넣기
+  
+Step 3. 포스팅 내 사진들의 링크를 다음과 같이 변경하기
+  
+![Sample](/assets/imge/Sample.jpg)
+  
+Step 4. git push 명령어를 사용한 후 확인 해보면 변경 사항 확인이 가능하며, 예시는 JPG 파일이지만 PNG, GIF도 확장자만 바꾸어 주면 사용 가능 !!
+  
+  
+  
+## 표 만들기 
 
-{% highlight text %}
-Clicking this number[^fn-sample_footnote]
-{% endhighlight %}
-
-Each footnote needs the `^fn-` prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:
-
-{% highlight text %}
-[^fn-sample_footnote]: Handy! Now click the return link to go back.
-{% endhighlight %}
-
-You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.
-
-## Heading
-
-Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-### Code
-
-Inline code is available with the `<code>` element. Snippets of multiple lines of code are supported through Rouge. Longer lines will automatically scroll horizontally when needed. You may also use code fencing (triple backticks) for rendering code.
-
-{% highlight js %}
-// Example can be run directly in your JavaScript console
-
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
-
-// Call the function
-adder(2, 6);
-// > 8
-{% endhighlight %}
-
-You may also optionally show code snippets with line numbers. Add `linenos` to the Rouge tags.
-
-{% highlight js linenos %}
-// Example can be run directly in your JavaScript console
-
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
-
-// Call the function
-adder(2, 6);
-// > 8
-{% endhighlight %}
-
-Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
-
-### Lists
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-- Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-- Donec id elit non mi porta gravida at eget metus.
-- Nulla vitae elit libero, a pharetra augue.
-
-Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
-
-1. Vestibulum id ligula porta felis euismod semper.
-2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-3. Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
-
-<dl>
-  <dt>HyperText Markup Language (HTML)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
-
-  <dt>Cascading Style Sheets (CSS)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
-
-  <dt>JavaScript (JS)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
-
-Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.
-
-### Images
-
-Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
-
-![placeholder](http://placehold.it/800x400 "Large example image")
-![placeholder](http://placehold.it/400x200 "Medium example image")
-![placeholder](http://placehold.it/200x200 "Small example image")
-
-Align to the center by adding `class="align-center"`:
-
-![placeholder](http://placehold.it/400x200 "Medium example image"){: .align-center}
-
-### Tables
-
-Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
-
-Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
-
------
-
-Want to see something else added? <a href="https://github.com/vszhub/not-pure-poole/issues/new">Open an issue.</a>
-
-[^fn-sample_footnote]: Handy! Now click the return link to go back.
+| Name | Upvotes | Downvotes | Total | abstention |
+|:----:|:-------:|:---------:|:-----:|:----------:|
+| Haeun | 13 | 10 | 23 | 0 |
+| Dayoung | 11 | 11 | 22 | 1 |
+| Bohyun | 12 | 9 | 21 | 2 |
+  
+![Table](/assets/imge/Table.jpg)
+  
+위 사진처럼 -, :, |를 사용하여 간편하게 표를 만들 수 있다.
+  
+i) : 가 왼쪽에 붙으면 왼쪽 정렬
+ii) : 가 양쪽에 붙으면 중앙 정렬
+iii) : 가 오른쪽에 붙으면 오른쪽 정렬이며, 
+  
+일반적인 텍스트와 마찬가지로 이텔릭/ 강조 표시가 가능하며 span tag를 사용하면 컬러 변경도 가능하다. 
+  
+---
