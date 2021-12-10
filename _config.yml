@@ -1,11 +1,14 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
-avatar: /avatar.jpeg
+title: Gyuwon's Blog
+description:  Yesterday is history.  
+              Tomorrow is mystery.  
+              But today is a present.  
+              It is called the present.
+url: https://gyuwonsong.github.io/july22.github.io/
+avatar: /profile.jpg
 paginate: 5
 permalink: pretty
-cover_image: /bg.jpeg
+cover_image: /profile2.jpg
 
 # Gems
 plugins:
@@ -35,8 +38,9 @@ logo: logo.png
 social:
   name: Songzi Vong
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://www.instagram.com/july.22days/
+    - https://www.facebook.com/profile.php?id=100008277976591
+    - https://github.com/gyuwonsong
 google_site_verification: xxxxx
 lang: en
 
@@ -54,6 +58,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Gyuwon Song
+  url: https://github.com/gyuwonsong
+  email: gyuwon0722@kookmin.ac.kr
