@@ -1,8 +1,11 @@
 ---
 layout: post
 title: jekyll
-date: 2021-12-11 22:36 +0800
-tags: [jekyll , what_is_jekyll?, github_page]
+date: 2021-12-11 02:34 +0800
+tags: 
+- jekyll
+- what_is_jekyll?
+- github_page
 toc:  true
 ---
 ---
