@@ -1,6 +1,7 @@
 ---
 layout: post
 title: jekyll
+description: What is jekyll?/ jekyll의 디렉토리 구조/ 포스트 꾸미기/ 사진 넣기/ 표 만들기
 date: 2021-12-11 02:34 +0800
 tags: 
 - jekyll
@@ -8,11 +9,7 @@ tags:
 - github_page
 toc:  true
 ---
----
-What is jekyll?/ jekyll의 디렉토리 구조/ 포스트 꾸미기/ 사진 넣기/ 표 만들기
-  
-  
-  
+--- 
 ## What is jekyll?
   
 'jekyll'이란 github에서 개발한 또 다른 사이트 개발 툴로, 블로그 지향적인 정적 사이트 생성이 가능하다. 이에 핵심 구동 역할로서 꼽을 수 있는 것 중 하나가 텍스트 변환 엔진이라는 것인데 이는 간단히 말해 마크업 언어로 글을 작성하면 이를 미리 정의해 둔 규착에 따라 다양한 레이아웃으로 포장하여 정적 웹사이트로 만들어주는 기능을 수행한다.
