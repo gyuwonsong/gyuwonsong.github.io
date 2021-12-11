@@ -52,3 +52,5 @@ ex: 파일의 수정을 여러 번 생성해서 파일명_최종.txt, 파일명_
 ... etc 더욱 많은 것들이 있다 :D !! 
   
 ![Git](https://user-images.githubusercontent.com/81706832/145675990-28055e0e-8633-4250-ad58-3d06592b347d.png)
+  
+---
