@@ -83,7 +83,7 @@ Step 4. 이를 Add > Commit > Push 의 과정을 거친 후 자신의 블로그�
   
 아래 사진처럼 문자 세 개만을 사용하여 간편하게 표를 만들 수 있다.
   
-![Table](https://user-images.githubusercontent.com/81706832/145662274-1d90b9ea-6b1f-4eed-b5b1-357fc0bb8627.jpg)
+![Table](https://user-images.githubusercontent.com/81706832/145662830-26672348-17d3-4302-a1ac-bceadd3b3b08.jpg)
   
 i) : 가 왼쪽에 붙으면 왼쪽 정렬  
   
