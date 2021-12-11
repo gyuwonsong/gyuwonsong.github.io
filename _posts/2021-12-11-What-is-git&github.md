@@ -6,10 +6,9 @@ tags:
 - git
 - github
 - what_is_git&github?
-- github_page
 toc:  true
 ---
-What is git & github?/ git의 장점 
+What is git & github?/ git의 장점
   
   
   
