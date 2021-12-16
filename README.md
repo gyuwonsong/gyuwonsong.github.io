@@ -1,6 +1,6 @@
 # It's My Github Blog !!  
 ## 깃허브 페이지를 이용하여 만든 깃허브 블로그  
-![my blog](https://user-images.githubusercontent.com/81706832/146318513-663a80bf-272c-46d7-8515-8eefa8e66ef3.jpg)
+![my blog](https://user-images.githubusercontent.com/81706832/146318816-a67c6df5-a727-4e7d-888f-d8c7664da1d2.jpg)
   
   
 ---
